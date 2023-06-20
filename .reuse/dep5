@@ -1,0 +1,12 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: fair-python-cookiecutter-demo
+Upstream-Contact: Jane Doe <j.doe@fz-juelich.de>
+Source: https://github.com/Materials-Data-Science-and-Informatics/fair-python-cookiecutter-demo
+
+Files: .gitignore pyproject.toml poetry.lock .pre-commit-config.yaml codemeta.json CITATION.cff README.md RELEASE_NOTES.md CHANGELOG.md CODE_OF_CONDUCT.md AUTHORS.md CONTRIBUTING.md .gitlab-ci.yml .gitlab/* .github/* mkdocs.yml docs/*
+Copyright: 2023 Forschungszentrum Jülich GmbH - Institute for Materials Data Science and Informatics (IAS9) - Stefan Sandfeld <s.sandfeld@fz-juelich.de>
+License: CC0-1.0
+
+Files: src/fair_python_cookiecutter_demo/* tests/*
+Copyright: 2023 Forschungszentrum Jülich GmbH - Institute for Materials Data Science and Informatics (IAS9) - Stefan Sandfeld <s.sandfeld@fz-juelich.de>
+License: Unlicense
