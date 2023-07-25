@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it using these metadata.
+type: software
+title: fair-python-cookiecutter-demo
+abstract: Demo repository bootstrapped from the FAIR Python Cookiecutter template.
+version: 0.1.0
+keywords:
+- fair
+- python
+- cookiecutter
+- template
+authors:
+- orcid: https://orcid.org/0123-4567-8910-1112
+  email: j.doe@fz-juelich.de
+  given-names: Jane
+  family-names: Doe
+contact:
+- orcid: https://orcid.org/0123-4567-8910-1112
+  email: j.doe@fz-juelich.de
+  given-names: Jane
+  family-names: Doe
+license: Unlicense
+url: 
+  https://materials-data-science-and-informatics.github.io/fair-python-cookiecutter-demo
+repository-code: 
+  https://github.com/Materials-Data-Science-and-Informatics/fair-python-cookiecutter-demo

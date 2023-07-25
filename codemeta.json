@@ -1,0 +1,79 @@
+{
+    "@context": [
+        "https://doi.org/10.5063/schema/codemeta-2.0",
+        "https://w3id.org/software-iodata",
+        "https://raw.githubusercontent.com/jantman/repostatus.org/master/badges/latest/ontology.jsonld",
+        "https://schema.org",
+        "https://w3id.org/software-types"
+    ],
+    "@type": "SoftwareSourceCode",
+    "audience": [
+        {
+            "@type": "Audience",
+            "audienceType": "Developers"
+        },
+        {
+            "@type": "Audience",
+            "audienceType": "Science/Research"
+        }
+    ],
+    "author": [
+        {
+            "@id": "https://orcid.org/0123-4567-8910-1112",
+            "@type": "Person",
+            "familyName": "Doe",
+            "givenName": "Jane"
+        }
+    ],
+    "codeRepository": "https://github.com/Materials-Data-Science-and-Informatics/fair-python-cookiecutter-demo",
+    "description": "Demo repository bootstrapped from the FAIR Python Cookiecutter template.",
+    "identifier": "fair-python-cookiecutter-demo",
+    "keywords": [
+        "cookiecutter",
+        "fair",
+        "python",
+        "template"
+    ],
+    "license": "http://spdx.org/licenses/Unlicense",
+    "name": "fair-python-cookiecutter-demo",
+    "operatingSystem": "POSIX > Linux",
+    "runtimePlatform": "Python 3",
+    "softwareRequirements": [
+        {
+            "@type": "SoftwareApplication",
+            "identifier": "fastapi",
+            "name": "fastapi",
+            "runtimePlatform": "Python 3",
+            "version": "^0.95.0"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "identifier": "python",
+            "name": "python",
+            "runtimePlatform": "Python 3",
+            "version": "^3.8"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "identifier": "typer",
+            "name": "typer",
+            "runtimePlatform": "Python 3",
+            "version": "^0.7.0"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "identifier": "uvicorn",
+            "name": "uvicorn",
+            "runtimePlatform": "Python 3",
+            "version": "^0.21.1"
+        }
+    ],
+    "targetProduct": {
+        "@type": "CommandLineApplication",
+        "executableName": "fair-python-cookiecutter-demo-cli",
+        "name": "fair-python-cookiecutter-demo-cli",
+        "runtimePlatform": "Python 3"
+    },
+    "url": "https://materials-data-science-and-informatics.github.io/fair-python-cookiecutter-demo",
+    "version": "0.1.0"
+}
