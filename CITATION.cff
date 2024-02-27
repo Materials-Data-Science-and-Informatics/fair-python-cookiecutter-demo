@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+type: software
+message: If you use this software, please cite it using this metadata.
+
+title: "fair-python-cookiecutter-demo"
+version: "0.3.0"
+abstract: "TODO - add description"
+repository-code: "https://github.com/Materials-Data-Science-and-Informatics/fair-python-cookiecutter-demo"
+license: "Unlicense"
+keywords:
+- TODO
+- add
+- keywords
+authors:
+- family-names: Pirogov
+  given-names: Anton
+  email: a.pirogov@fz-juelich.de
+  orcid: https://orcid.org/0000-0002-5077-7497
+  affiliation: Forschungszentrum Jülich GmbH - Institute for Materials Data Science
+    and Informatics (IAS9)
+contact:
+- orcid: https://orcid.org/0000-0002-5077-7497
+  email: a.pirogov@fz-juelich.de
+  given-names: Anton
+  family-names: Pirogov
+url: 
+  https://materials-data-science-and-informatics.github.io/fair-python-cookiecutter-demo

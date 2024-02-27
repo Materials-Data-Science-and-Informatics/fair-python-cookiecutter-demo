@@ -1,0 +1,51 @@
+{
+  "@context": [
+    "https://doi.org/10.5063/schema/codemeta-2.0",
+    "https://w3id.org/software-iodata",
+    "https://raw.githubusercontent.com/jantman/repostatus.org/master/badges/latest/ontology.jsonld",
+    "https://schema.org",
+    "https://w3id.org/software-types"
+  ],
+  "@type": "SoftwareSourceCode",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Anton",
+      "familyName": "Pirogov",
+      "email": "a.pirogov@fz-juelich.de",
+      "@id": "https://orcid.org/0000-0002-5077-7497"
+    }
+  ],
+  "name": "fair-python-cookiecutter-demo",
+  "description": "TODO - add description",
+  "version": "0.3.0",
+  "keywords": [
+    "TODO",
+    "add",
+    "keywords"
+  ],
+  "maintainer": [
+    {
+      "@type": "Person",
+      "givenName": "Anton",
+      "familyName": "Pirogov",
+      "email": "a.pirogov@fz-juelich.de",
+      "@id": "https://orcid.org/0000-0002-5077-7497"
+    }
+  ],
+  "license": [
+    "https://spdx.org/licenses/Unlicense"
+  ],
+  "softwareHelp": "https://materials-data-science-and-informatics.github.io/fair-python-cookiecutter-demo",
+  "codeRepository": "https://github.com/Materials-Data-Science-and-Informatics/fair-python-cookiecutter-demo",
+  "contributor": [
+    {
+      "@type": "Person",
+      "givenName": "Anton",
+      "familyName": "Pirogov",
+      "email": "a.pirogov@fz-juelich.de",
+      "@id": "https://orcid.org/0000-0002-5077-7497"
+    }
+  ],
+  "url": "https://materials-data-science-and-informatics.github.io/fair-python-cookiecutter-demo"
+}
