@@ -1,0 +1,152 @@
+[project]
+# ---- DO NOT EDIT - core project metadata managed by somesy  ----
+# to update, edit values in [tool.somesy.project] section
+# and run somesy: poetry run somesy
+name = "fair-python-cookiecutter-demo"
+version = "1.0.0"
+description = "TODO - add description"
+
+authors = [
+    {name = "Anton Pirogov",email = "a.pirogov@fz-juelich.de"},
+]
+maintainers = [
+    {name = "Anton Pirogov",email = "a.pirogov@fz-juelich.de"},
+]
+
+requires-python = ">=3.9"
+keywords = [
+    "TODO",
+    "add",
+    "keywords",
+]
+dependencies = [
+  "typer[all]>=0.12.3",
+  "fastapi>=0.111.1",
+  "uvicorn>=0.30.4",
+]
+
+# ----------------------------------------------------------------
+
+# Python- and Poetry-specific metadata
+# ------------------------------------
+readme = "README.md"
+classifiers = [
+    # TODO: update the classifier strings
+    # (see https://pypi.org/classifiers/)
+    "Operating System :: POSIX :: Linux",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+]
+
+# ---- managed by somesy, see .somesy.toml ----
+license = {text = "Unlicense"}
+
+[project.urls]
+repository = "https://github.com/Materials-Data-Science-and-Informatics/fair-python-cookiecutter-demo"
+homepage = "https://materials-data-science-and-informatics.github.io/fair-python-cookiecutter-demo"
+documentation = "https://materials-data-science-and-informatics.github.io/fair-python-cookiecutter-demo"
+
+[tool.poetry]
+# the Python packages that will be included in a built distribution:
+packages = [{include = "fair_python_cookiecutter_demo", from = "src"}]
+
+# always include basic info for humans and core metadata in the distribution,
+# include files related to test and documentation only in sdist:
+include = [
+  "*.md", "LICENSE", "LICENSES", "REUSE.toml", "CITATION.cff", "codemeta.json",
+  { path = "mkdocs.yml", format = "sdist" },
+  { path = "docs", format = "sdist" },
+  { path = "tests", format = "sdist" },
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+
+[tool.poetry.group.dev.dependencies]
+poethepoet = "^0.27.0"
+pre-commit = "^3.5.0"
+pytest = "^8.3.2"
+pytest-cov = "^5.0.0"
+hypothesis = "^6.108.5"
+licensecheck = "^2024.2"
+httpx = "^0.27.0"
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.6.0"
+mkdocstrings = {extras = ["python"], version = "^0.25.2"}
+mkdocs-material = "^9.5.30"
+mkdocs-gen-files = "^0.5.0"
+mkdocs-literate-nav = "^0.6.1"
+mkdocs-section-index = "^0.3.9"
+mkdocs-macros-plugin = "^1.0.5"
+markdown-include = "^0.8.1"
+pymdown-extensions = "^10.9"
+markdown-exec = {extras = ["ansi"], version = "^1.9.3"}
+mkdocs-coverage = "^1.1.0"
+mike = "^2.1.2"
+anybadge = "^1.14.0"
+interrogate = "^1.7.0"
+black = "^24.4.2"
+
+[project.scripts]
+# put your script entrypoints here
+# some-script = 'module.submodule:some_object'
+fair-python-cookiecutter-demo-cli = 'fair_python_cookiecutter_demo.cli:app'
+fair-python-cookiecutter-demo-api = 'fair_python_cookiecutter_demo.api:run'
+
+[build-system]
+requires = ["poetry-core>=2.0"]
+build-backend = "poetry.core.masonry.api"
+
+# NOTE: You can run the following with "poetry poe TASK"
+[tool.poe.tasks]
+init-dev = "pre-commit install"  # run once after clone to enable various tools
+lint = "pre-commit run"  # pass --all-files to check everything
+test = "pytest"  # pass --cov to also collect coverage info
+docs = "mkdocs build"  # run this to generate local documentation
+licensecheck = "licensecheck"  # run this when you add new deps
+
+# Tool Configurations
+# -------------------
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+addopts = "--cov-report=term-missing:skip-covered"
+filterwarnings = [
+# Example:
+# "ignore::DeprecationWarning:importlib_metadata.*"
+]
+
+[tool.coverage.run]
+source = ["fair_python_cookiecutter_demo"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if TYPE_CHECKING:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]
+
+[tool.ruff.lint]
+# see here: https://docs.astral.sh/ruff/rules/
+# ruff by default works like a mix of flake8, autoflake and black
+# we extend default linter rules to substitute:
+# flake8-bugbear, pydocstyle, isort, flake8-bandit
+extend-select = ["B", "D", "I", "S"]
+ignore = ["D203", "D213", "D407", "B008", "S101", "D102", "D103"]
+
+[tool.bandit]
+exclude_dirs = ["tests", "scripts"]
+
+[tool.licensecheck]
+using = "poetry"

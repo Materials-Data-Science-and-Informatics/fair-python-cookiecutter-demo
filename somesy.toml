@@ -1,0 +1,37 @@
+# NOTE: this repository uses the tool somesy to help you easily maintain
+# and synchronize all the high-level project metadata across multiple files.
+# To see which other metadata can be added, check out the somesy documentation
+# https://materials-data-science-and-informatics.github.io/somesy/main/
+[project]
+name = "fair-python-cookiecutter-demo"
+version = "1.0.0"
+description = "TODO - add description"
+license = "Unlicense"
+
+keywords = [
+    "TODO",
+    "add",
+    "keywords"
+]
+repository = "https://github.com/Materials-Data-Science-and-Informatics/fair-python-cookiecutter-demo"
+homepage = "https://materials-data-science-and-informatics.github.io/fair-python-cookiecutter-demo"
+documentation = "https://materials-data-science-and-informatics.github.io/fair-python-cookiecutter-demo"
+
+[[project.people]]
+given-names = "Anton"
+family-names = "Pirogov"
+email = "a.pirogov@fz-juelich.de"
+orcid = "https://orcid.org/0000-0002-5077-7497"
+author = true
+maintainer = true
+
+# You also can add more authors, maintainers or contributors here:
+# [[project.people]]
+# given-names = "Another"
+# family-names = "Contributor"
+# email = "contributor@email.com"
+# orcid = "https://orcid.org/0123-4567-8910-1112"
+# ...
+
+[config]
+verbose = true
